@@ -120,23 +120,8 @@ function setupVideoCarouselAutoplay() {
 }
 
 $(document).ready(function() {
-    // Check for click events on the navbar burger icon
-
-    var options = {
-		slidesToScroll: 1,
-		slidesToShow: 1,
-		loop: true,
-		infinite: true,
-		autoplay: true,
-		autoplaySpeed: 5000,
+    // Setup video autoplay for carousel if present
+    if (document.querySelectorAll('.results-carousel video').length > 0) {
+        setupVideoCarouselAutoplay();
     }
-
-	// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-	
-    bulmaSlider.attach();
-    
-    // Setup video autoplay for carousel
-    setupVideoCarouselAutoplay();
-
 })

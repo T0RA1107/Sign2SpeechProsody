@@ -3,309 +3,904 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+
+  <meta name="title" content="Sign-to-Speech Prosody Transfer via Sign Reconstruction-based GAN">
+  <meta name="description" content="We propose Sign-to-Speech Prosody Transfer, a novel task that captures prosodic nuances in sign language and integrates them into synthesized speech via SignRecGAN and S2PFormer.">
+  <meta name="keywords" content="sign language, prosody transfer, speech synthesis, TTS, GAN, multimodal learning, Sign2Speech">
+  <meta name="author" content="Toranosuke Manabe, Yuto Shibata, Shinnosuke Takamichi, Yoshimitsu Aoki">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:site_name" content="Keio University">
+  <meta property="og:title" content="Sign-to-Speech Prosody Transfer via Sign Reconstruction-based GAN">
+  <meta property="og:description" content="We propose Sign-to-Speech Prosody Transfer, a novel task that captures prosodic nuances in sign language and integrates them into synthesized speech via SignRecGAN and S2PFormer.">
+  <meta property="og:url" content="https://t0ra.github.io/Sign2SpeechProsody/">
+  <meta property="og:image" content="static/images/figures/heading.png">
+  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Toranosuke Manabe">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="citation_title" content="Sign-to-Speech Prosody Transfer via Sign Reconstruction-based GAN">
+  <meta name="citation_author" content="Manabe, Toranosuke">
+  <meta name="citation_author" content="Shibata, Yuto">
+  <meta name="citation_author" content="Takamichi, Shinnosuke">
+  <meta name="citation_author" content="Aoki, Yoshimitsu">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="ICPR 2026">
+  <meta name="citation_pdf_url" content="static/pdfs/paper.pdf">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+  <meta name="theme-color" content="#1a1a2e">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>Sign-to-Speech Prosody Transfer | ICPR 2026</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
+
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
+  <script defer src="static/js/index.js?v=2"></script>
+
+  <style>
+    /* ===== Hero Clean White ===== */
+    .hero-gradient {
+      background: #ffffff;
+      position: relative;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed, #2563eb);
+    }
+
+    .hero-gradient .hero-body {
+      padding: 4.5rem 1.5rem 3.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .venue-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #2563eb;
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .hero-gradient .publication-title {
+      color: #0f172a !important;
+      font-size: 2.6rem !important;
+      font-weight: 900 !important;
+      line-height: 1.15 !important;
+      margin-bottom: 1.5rem !important;
+    }
+
+    .hero-gradient .publication-authors a {
+      color: #2563eb !important;
+    }
+
+    .hero-gradient .publication-authors {
+      color: #334155 !important;
+    }
+
+    .hero-gradient .institution-text {
+      color: #64748b;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .hero-gradient .button.is-dark {
+      background: #1e293b !important;
+      border: none !important;
+      color: white !important;
+    }
+
+    .hero-gradient .button.is-dark:hover {
+      background: #2563eb !important;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Teaser Section ===== */
+    .teaser-section {
+      background: #0d1117;
+      padding: 3rem 1.5rem;
+    }
+
+    .teaser-video-wrapper {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+      background: #000;
+    }
+
+    .teaser-video-wrapper video {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .teaser-caption {
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== Section Styling ===== */
+    .section-title-accent {
+      position: relative;
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title-accent::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 48px;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+
+    /* ===== Abstract ===== */
+    .abstract-section {
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .abstract-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem 3rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    .abstract-card p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #334155;
+    }
+
+    /* ===== Key Contribution Pills ===== */
+    .contribution-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .contribution-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: all 0.3s ease;
+      border-left: 4px solid;
+    }
+
+    .contribution-card:nth-child(1) { border-left-color: #667eea; }
+    .contribution-card:nth-child(2) { border-left-color: #f093fb; }
+    .contribution-card:nth-child(3) { border-left-color: #4facfe; }
+
+    .contribution-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .contribution-card .card-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contribution-card h4 {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1e293b;
+      margin-bottom: 0.5rem;
+    }
+
+    .contribution-card p {
+      font-size: 0.88rem;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    /* ===== Pipeline Figure ===== */
+    .figure-container {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+      margin: 1.5rem 0;
+    }
+
+    .figure-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .figure-caption {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #f1f5f9;
+      font-size: 0.9rem;
+      color: #64748b;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .figure-caption strong {
+      color: #334155;
+    }
+
+    /* ===== Method Subsection Cards ===== */
+    .method-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .method-grid { grid-template-columns: 1fr; }
+    }
+
+    .method-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.75rem;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .method-card h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .method-tag {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .method-card p {
+      font-size: 0.9rem;
+      color: #64748b;
+      line-height: 1.65;
+    }
+
+    /* ===== Audio Samples ===== */
+    .samples-section {
+      background: #f8fafc;
+    }
+
+    .sample-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .sample-carousel-track {
+      display: flex;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sample-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      border: 1px solid #e2e8f0;
+      flex: 0 0 100%;
+      width: 100%;
+    }
+
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .carousel-btn {
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(102, 126, 234, 0.35);
+    }
+
+    .carousel-btn:hover:not(:disabled) {
+      transform: scale(1.1);
+      box-shadow: 0 4px 14px rgba(102, 126, 234, 0.5);
+    }
+
+    .carousel-btn:disabled {
+      background: #e2e8f0;
+      color: #94a3b8;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: none;
+      padding: 0;
+    }
+
+    .carousel-dot.active {
+      background: #667eea;
+      transform: scale(1.25);
+    }
+
+    .carousel-counter {
+      font-size: 0.9rem;
+      color: #64748b;
+      font-weight: 600;
+      min-width: 52px;
+      text-align: center;
+    }
+
+    .sample-card-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 0.75rem 1.5rem;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .sample-card-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+
+    @media (max-width: 900px) {
+      .sample-card-body {
+        grid-template-columns: 1fr;
       }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+    }
+
+    .sample-col {
+      padding: 1.5rem;
+      border-right: 1px solid #f1f5f9;
+    }
+
+    .sample-col:last-child {
+      border-right: none;
+    }
+
+    @media (max-width: 900px) {
+      .sample-col {
+        border-right: none;
+        border-bottom: 1px solid #f1f5f9;
       }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+      .sample-col:last-child { border-bottom: none; }
+    }
+
+    .sample-col-title {
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .sample-col-title.sign-col { color: #0ea5e9; }
+    .sample-col-title.baseline-col { color: #f59e0b; }
+    .sample-col-title.ours-col { color: #10b981; }
+
+    .sample-col video {
+      width: 100%;
+      border-radius: 8px;
+      background: #000;
+    }
+
+    .sample-col audio {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+
+    /* Custom audio player styling */
+    audio::-webkit-media-controls-panel {
+      background: #f8fafc;
+    }
+
+    .ours-badge {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== Results Tables ===== */
+    .results-table-wrapper {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+      overflow-x: auto;
+    }
+
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    .results-table th {
+      background: #f8fafc;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      font-weight: 700;
+      color: #334155;
+      border-bottom: 2px solid #e2e8f0;
+      white-space: nowrap;
+    }
+
+    .results-table th:first-child {
+      text-align: left;
+    }
+
+    .results-table td {
+      padding: 0.65rem 1rem;
+      text-align: center;
+      color: #475569;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .results-table td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: #334155;
+    }
+
+    .results-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .results-table tr:hover td {
+      background: #f8fafc;
+    }
+
+    .results-table .best-score {
+      font-weight: 700;
+      color: #667eea;
+    }
+
+    .results-table .second-score {
+      text-decoration: underline;
+      text-decoration-style: solid;
+    }
+
+    .results-table .real-speech-row td {
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    .results-table .ours-full td {
+      background: #f0f4ff;
+      font-weight: 600;
+    }
+
+    .results-table .group-header td {
+      background: #f8fafc;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94a3b8;
+      padding: 0.5rem 1rem;
+    }
+
+    .results-table .loss-check {
+      color: #10b981;
+      font-size: 1rem;
+    }
+
+    /* User study table */
+    .user-study-table td.sig-improve {
+      background: #d1fae5;
+      color: #059669;
+      font-weight: 600;
+    }
+
+    /* ===== Qualitative Section ===== */
+    .qual-figure-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .qual-figure-row { grid-template-columns: 1fr; }
+    }
+
+    /* ===== BibTeX Section ===== */
+    #BibTeX {
+      background: #f8fafc;
+    }
+
+    .bibtex-wrapper {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    .bibtex-wrapper pre {
+      margin: 0 !important;
+      background: #1e293b !important;
+      color: #e2e8f0 !important;
+      border-radius: 12px !important;
+      padding: 1.5rem !important;
+      font-family: 'JetBrains Mono', monospace !important;
+      font-size: 0.85rem !important;
+      line-height: 1.6 !important;
+      border: none !important;
+    }
+
+    .bibtex-wrapper code {
+      background: transparent !important;
+      color: #e2e8f0 !important;
+      font-family: 'JetBrains Mono', monospace !important;
+    }
+
+    /* ===== Scroll to Top ===== */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .scroll-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+    }
+
+    /* ===== Section padding ===== */
+    .section-padded {
+      padding: 4rem 1.5rem;
+    }
+
+    /* ===== Paper PDF embed section ===== */
+    .paper-embed-section {
+      background: white;
+    }
+
+    .task-pipeline-viz {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 2rem;
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+
+    .pipeline-box {
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: center;
+      min-width: 140px;
+    }
+
+    .pipeline-box.sign {
+      background: linear-gradient(135deg, #0ea5e9, #0284c7);
+      color: white;
+    }
+
+    .pipeline-box.text {
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+    }
+
+    .pipeline-box.speech {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+    }
+
+    .pipeline-box.model {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+    }
+
+    .pipeline-arrow {
+      color: #94a3b8;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    .pipeline-vs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .pipeline-vs-label {
+      font-size: 0.7rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ===== Hero mobile ===== */
+    @media (max-width: 768px) {
+      .hero-gradient .publication-title {
+        font-size: 1.9rem !important;
+      }
+      .hero-gradient .hero-body {
+        padding: 3rem 1rem 2.5rem;
+      }
+      .abstract-card {
+        padding: 1.75rem 1.5rem;
+      }
+      .section-padded {
+        padding: 2.5rem 1rem;
+      }
+      .task-pipeline-viz {
+        gap: 0.5rem;
+        padding: 1.5rem 1rem;
+      }
+      .pipeline-box {
+        min-width: 110px;
+        font-size: 0.8rem;
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
+<button class="scroll-to-top" onclick="scrollToTop()" title="Back to top" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+<!-- ===== HERO ===== -->
+<section class="hero hero-gradient">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
+          <div>
+            <span class="venue-badge">
+              <i class="fas fa-award"></i>
+              ICPR 2026
+            </span>
           </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
+
+          <h1 class="title is-1 publication-title">
+            Sign-to-Speech Prosody Transfer<br>
+            <span style="font-weight:700; color: #2563eb;">via Sign Reconstruction-based GAN</span>
+          </h1>
+
+          <div class="is-size-5 publication-authors" style="margin-bottom: 1rem;">
+            <span class="author-block">
+              <a href="mailto:torapira@keio.jp" target="_blank">Toranosuke Manabe</a>,
+            </span>
+            <span class="author-block">
+              <a href="mailto:yuto19990715@gmail.com" target="_blank">Yuto Shibata</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/site/shinnosuketakamichi/" target="_blank">Shinnosuke Takamichi</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://aoki-medialab.jp/" target="_blank">Yoshimitsu Aoki</a>
+            </span>
           </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
+
+          <div class="institution-text" style="margin-bottom: 2rem;">
+            Keio University, Yokohama, Japan
           </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
+
+          <div class="column has-text-centered">
+            <div class="publication-links" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;">
+
+              <a href="static/pdfs/paper.pdf" target="_blank"
+                 class="external-link button is-dark is-rounded" style="font-size:0.95rem; padding: 0.65rem 1.5rem;">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+              </a>
+
+              <a href="static/videos/supp-video.mp4" target="_blank"
+                 class="external-link button is-dark is-rounded" style="font-size:0.95rem; padding: 0.65rem 1.5rem;">
+                <span class="icon"><i class="fas fa-film"></i></span>
+                <span>Video</span>
+              </a>
+
+              <a href="#samples"
+                 class="external-link button is-dark is-rounded" style="font-size:0.95rem; padding: 0.65rem 1.5rem;">
+                <span class="icon"><i class="fas fa-headphones"></i></span>
+                <span>Audio Samples</span>
+              </a>
+
+              <a href="#BibTeX"
+                 class="external-link button is-dark is-rounded" style="font-size:0.95rem; padding: 0.65rem 1.5rem;">
+                <span class="icon"><i class="fas fa-quote-right"></i></span>
+                <span>Cite</span>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+<!-- ===== TEASER VIDEO ===== -->
+<section class="teaser-section">
+  <div class="container is-max-desktop">
+    <div class="teaser-video-wrapper">
+      <video controls loop preload="metadata" poster="">
+        <source src="static/videos/supp-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="teaser-caption">
+      <strong style="color: rgba(255,255,255,0.9);">Supplemental Video.</strong>
+      Our method <em>SignRecGAN</em> synthesizes expressive speech that faithfully reflects the prosodic nuances of sign language — emphasis, intonation, and emotional dynamics — without requiring paired sign-speech corpora.
+    </p>
+  </div>
+</section>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+<!-- ===== ABSTRACT ===== -->
+<section class="section abstract-section section-padded">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="section-title-accent" style="margin-bottom: 1.5rem;">Abstract</h2>
+        <div class="abstract-card">
+          <p>
+            Deep learning models have improved sign language-to-text translation, making signed messages more accessible to non-signers. When the goal is spoken communication, a naive approach converts signed messages to text and then synthesizes speech via Text-to-Speech (TTS). However, this two-stage pipeline inevitably treats text as a bottleneck, causing the loss of rich non-verbal information originally conveyed in signing.
+          </p>
+          <p style="margin-top: 1rem;">
+            To address this limitation, we propose a novel task, <strong>Sign-to-Speech Prosody Transfer</strong>, which aims to capture the global prosodic nuances expressed in sign language and directly integrate them into synthesized speech. A major challenge is that aligning sign and speech requires expert knowledge, making annotation extremely costly. To overcome this, we introduce <strong>SignRecGAN</strong>, a scalable training framework that leverages unimodal datasets without cross-modal annotations through adversarial learning and reconstruction losses. We also propose <strong>S2PFormer</strong>, a new model architecture that preserves the expressive power of existing TTS models while enabling the injection of sign-derived prosody.
+          </p>
+          <p style="margin-top: 1rem;">
+            Extensive experiments demonstrate that our method synthesizes speech that faithfully reflects the emotional content of sign language, opening new possibilities for more natural sign language communication.
+          </p>
+        </div>
+      </div>
+    </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
+    <!-- Key Contributions -->
+    <div class="columns is-centered" style="margin-top: 2.5rem;">
+      <div class="column is-four-fifths">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #334155; margin-bottom: 1rem; text-align: center;">Key Contributions</h3>
+        <div class="contribution-grid">
+          <div class="contribution-card">
+            <div class="card-icon">🎯</div>
+            <h4>Novel Task</h4>
+            <p>We define <em>Sign-to-Speech Prosody Transfer</em> — the first task to capture global prosody from sign language and integrate it directly into speech synthesis.</p>
+          </div>
+          <div class="contribution-card">
+            <div class="card-icon">🔄</div>
+            <h4>SignRecGAN Framework</h4>
+            <p>An adversarial learning framework using unpaired unimodal datasets with <em>SignRec loss</em> and <em>ProMo loss</em> to bridge the sign-speech gap without paired annotations.</p>
+          </div>
+          <div class="contribution-card">
+            <div class="card-icon">🏗️</div>
+            <h4>S2PFormer Architecture</h4>
+            <p>A Sign-to-Prosody Transformer that augments a pretrained FastSpeech2 with a cross-attention branch, preserving speech quality while injecting sign-derived prosody.</p>
           </div>
         </div>
       </div>
@@ -313,208 +908,698 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
+<!-- ===== TASK OVERVIEW ===== -->
+<section class="section section-padded" style="background: white;">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="section-title-accent" style="text-align: center;">Task Overview</h2>
+        <div style="text-align: center; margin-bottom: 2rem; color: #64748b; font-size: 0.95rem; line-height: 1.7;">
+          Conventional pipelines lose prosodic information by routing through text as a bottleneck.<br>
+          Our approach directly transfers sign language prosody into speech.
+        </div>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+        <!-- Pipeline visualization -->
+        <div class="task-pipeline-viz">
+          <div class="pipeline-vs">
+            <div class="pipeline-vs-label" style="margin-bottom:0.5rem;">Conventional</div>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <div class="pipeline-box sign">Sign<br><small>Language</small></div>
+              <span class="pipeline-arrow">→</span>
+              <div class="pipeline-box text">Text<br><small style="color:#ef4444;">bottleneck</small></div>
+              <span class="pipeline-arrow">→</span>
+              <div class="pipeline-box speech">Speech<br><small>no prosody</small></div>
+            </div>
+          </div>
+          <div style="padding: 0 1.5rem; color: #cbd5e1; font-size: 2rem; font-weight: 300; align-self: center;">vs</div>
+          <div class="pipeline-vs">
+            <div class="pipeline-vs-label" style="margin-bottom:0.5rem;">Ours (SignRecGAN)</div>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <div class="pipeline-box sign">Sign<br><small>Language</small></div>
+              <span class="pipeline-arrow">→</span>
+              <div class="pipeline-box model">S2PFormer<br><small>+ SignRec/ProMo</small></div>
+              <span class="pipeline-arrow">→</span>
+              <div class="pipeline-box speech">Speech<br><small style="color:#d1fae5; background: rgba(255,255,255,0.15); padding: 0.1rem 0.4rem; border-radius:4px; font-size:0.7rem;">✓ prosody</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="figure-container">
+          <img src="static/images/figures/heading.png" alt="Teaser: Sign-to-Speech Prosody Transfer comparison" loading="lazy">
+          <p class="figure-caption">
+            <strong>Fig. 1.</strong> In the reference sign language video (left), the phrase "many Italians" is emphasized through rapid hand movements and facial expressions. The two-stage baseline (middle) fails to reflect this prosody, whereas our approach (right) successfully captures the emphasis on "many."
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
+<!-- ===== METHOD ===== -->
+<section class="section section-padded" style="background: #f8fafc;">
+  <div class="container is-max-desktop">
+    <h2 class="section-title-accent" style="text-align: center; margin-bottom: 0.5rem;">Method</h2>
+    <p style="text-align: center; color: #64748b; font-size: 0.95rem; margin-bottom: 2.5rem; line-height: 1.7;">
+      SignRecGAN consists of four main components working together to transfer prosodic expression<br>from sign language into synthesized speech without paired cross-modal annotations.
+    </p>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+    <!-- Overview figure -->
+    <div class="figure-container">
+      <img src="static/images/figures/concept.png" alt="SignRecGAN framework overview" loading="lazy">
+      <p class="figure-caption">
+        <strong>Fig. 2. SignRecGAN Overview.</strong> The framework trains with unpaired unimodal datasets of sign language (OpenASL) and speech (VCTK). S2PFormer generates prosody-enriched speech, supervised by SignRec loss (sign motion reconstruction), ProMo loss (cross-modal regularization), and an adversarial discriminator.
+      </p>
+    </div>
+
+    <!-- S2PFormer + AdaPM side by side -->
+    <div class="method-grid" style="margin-top: 2rem;">
+      <div>
+        <div class="figure-container" style="height: 100%; box-sizing: border-box;">
+          <h4 style="font-size: 1rem; font-weight: 700; color: #334155; margin-bottom: 1rem;">
+            S2PFormer Architecture
+            <span class="method-tag">S2PFormer</span>
+          </h4>
+          <img src="static/images/figures/ts2s.png" alt="S2PFormer architecture" loading="lazy">
+          <p class="figure-caption">
+            <strong>Fig. 3.</strong> S2PFormer augments a frozen FastSpeech2 backbone with a visual backbone (CTR-GCN + MS-TCN), Adaptive Prosody Mixer (AdaPM), and a prosody estimator to inject sign language features while preserving speech quality.
+          </p>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+      <div>
+        <div class="figure-container" style="height: 100%; box-sizing: border-box;">
+          <h4 style="font-size: 1rem; font-weight: 700; color: #334155; margin-bottom: 1rem;">
+            Adaptive Prosody Mixer
+            <span class="method-tag">AdaPM</span>
+          </h4>
+          <img src="static/images/figures/AdaPM.png" alt="AdaPM module" loading="lazy">
+          <p class="figure-caption">
+            <strong>Fig. 4.</strong> AdaPM adaptively balances the sign-language prosody contribution and the original TTS prosody using a Mixture-of-Experts inspired gating mechanism, enabling stable training.
+          </p>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+    </div>
+
+    <!-- Loss function cards -->
+    <div class="method-grid" style="margin-top: 1.5rem;">
+      <div class="method-card">
+        <h4>
+          <span style="background: linear-gradient(135deg, #f093fb, #f5576c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.3rem;">●</span>
+          SignRec Loss
+        </h4>
+        <p>
+          Reconstructs sign language motion (velocity &amp; acceleration histograms of hands and face) from the synthesized speech's prosody features (pitch &amp; energy). By forcing the model to preserve recoverable sign cues in speech, it ensures the two modalities remain correlated.
+        </p>
+        <div style="margin-top: 1rem; padding: 0.75rem 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+          <code style="font-size: 0.82rem; color: #475569 !important; background: transparent !important; font-family: 'JetBrains Mono', monospace;">
+            ℒ<sub>SignRec</sub> = −¼ Σ<sub>M∈𝓜</sub> Σ<sub>k</sub> P<sub>M</sub>(k) log P̂<sub>M</sub>(k)
+          </code>
+        </div>
+      </div>
+
+      <div class="method-card">
+        <h4>
+          <span style="background: linear-gradient(135deg, #4facfe, #00f2fe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.3rem;">●</span>
+          ProMo Loss
+        </h4>
+        <p>
+          Aligns the distributions of sign language and speech using cross-modal prior knowledge: hand movement magnitude correlates with speech energy; facial velocity correlates with speech pitch. A margin <em>c</em> prevents over-regularization.
+        </p>
+        <div style="margin-top: 1rem; padding: 0.75rem 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+          <code style="font-size: 0.82rem; color: #475569 !important; background: transparent !important; font-family: 'JetBrains Mono', monospace;">
+            ℒ<sub>ProMo</sub> = max(|μ<sub>energy</sub> − μ<sub>v,hand</sub>| − c, 0) + ...
+          </code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign prosody label figure -->
+    <div class="figure-container" style="margin-top: 1.5rem;">
+      <img src="static/images/figures/sign_label.png" alt="Sign language prosody labels" loading="lazy" style="max-height: 280px; object-fit: contain; margin: auto; display: block;">
+      <p class="figure-caption">
+        <strong>Fig. 5. Sign Language Prosody Labels.</strong> Motion histograms of hand velocity/acceleration and facial velocity/acceleration serve as proxy labels for sign prosody, enabling training without any cross-modal annotations.
+      </p>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
+<!-- ===== AUDIO SAMPLES ===== -->
+<section class="section section-padded samples-section" id="samples">
+  <div class="container is-max-desktop">
+    <h2 class="section-title-accent" style="text-align: center; margin-bottom: 0.5rem;">Audio Comparison Samples</h2>
+    <p style="text-align: center; color: #64748b; font-size: 0.95rem; margin-bottom: 2.5rem; line-height: 1.7;">
+      For each sample: the source sign language video (left), speech from the two-stage baseline (middle),<br>and speech from our <em>SignRecGAN</em> (right). Listen and compare the prosodic richness.
+    </p>
 
+    <div class="sample-carousel">
+      <div class="sample-carousel-track">
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- Sample 1 -->
+      <div class="sample-card">
+        <div class="sample-card-header">
+          <i class="fas fa-play-circle"></i>
+          Sample 1
+        </div>
+        <div class="sample-card-body">
+          <div class="sample-col">
+            <div class="sample-col-title sign-col">
+              <i class="fas fa-sign-language"></i> Sign Language Input
+            </div>
+            <video controls muted loop preload="metadata" style="max-height: 200px; object-fit: contain; background: #111;">
+              <source src="static/videos/samples/sample1_sign.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title baseline-col">
+              <i class="fas fa-minus-circle"></i> Two-Stage (Baseline)
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Text → TTS</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample1_2stage.wav" type="audio/wav">
+            </audio>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title ours-col">
+              <i class="fas fa-check-circle"></i> SignRecGAN (Ours) <span class="ours-badge">Ours</span>
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Speech with Prosody</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample1_ours.wav" type="audio/wav">
+            </audio>
           </div>
         </div>
       </div>
+
+      <!-- Sample 2 -->
+      <div class="sample-card">
+        <div class="sample-card-header">
+          <i class="fas fa-play-circle"></i>
+          Sample 2
+        </div>
+        <div class="sample-card-body">
+          <div class="sample-col">
+            <div class="sample-col-title sign-col">
+              <i class="fas fa-sign-language"></i> Sign Language Input
+            </div>
+            <video controls muted loop preload="metadata" style="max-height: 200px; object-fit: contain; background: #111;">
+              <source src="static/videos/samples/sample2_sign.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title baseline-col">
+              <i class="fas fa-minus-circle"></i> Two-Stage (Baseline)
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Text → TTS</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample2_2stage.wav" type="audio/wav">
+            </audio>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title ours-col">
+              <i class="fas fa-check-circle"></i> SignRecGAN (Ours) <span class="ours-badge">Ours</span>
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Speech with Prosody</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample2_ours.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample 3 -->
+      <div class="sample-card">
+        <div class="sample-card-header">
+          <i class="fas fa-play-circle"></i>
+          Sample 3
+        </div>
+        <div class="sample-card-body">
+          <div class="sample-col">
+            <div class="sample-col-title sign-col">
+              <i class="fas fa-sign-language"></i> Sign Language Input
+            </div>
+            <video controls muted loop preload="metadata" style="max-height: 200px; object-fit: contain; background: #111;">
+              <source src="static/videos/samples/sample3_sign.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title baseline-col">
+              <i class="fas fa-minus-circle"></i> Two-Stage (Baseline)
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Text → TTS</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample3_2stage.wav" type="audio/wav">
+            </audio>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title ours-col">
+              <i class="fas fa-check-circle"></i> SignRecGAN (Ours) <span class="ours-badge">Ours</span>
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Speech with Prosody</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample3_ours.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample 4 -->
+      <div class="sample-card">
+        <div class="sample-card-header">
+          <i class="fas fa-play-circle"></i>
+          Sample 4
+        </div>
+        <div class="sample-card-body">
+          <div class="sample-col">
+            <div class="sample-col-title sign-col">
+              <i class="fas fa-sign-language"></i> Sign Language Input
+            </div>
+            <video controls muted loop preload="metadata" style="max-height: 200px; object-fit: contain; background: #111;">
+              <source src="static/videos/samples/sample4_sign.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title baseline-col">
+              <i class="fas fa-minus-circle"></i> Two-Stage (Baseline)
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Text → TTS</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample4_2stage.wav" type="audio/wav">
+            </audio>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title ours-col">
+              <i class="fas fa-check-circle"></i> SignRecGAN (Ours) <span class="ours-badge">Ours</span>
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Speech with Prosody</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample4_ours.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample 5 -->
+      <div class="sample-card">
+        <div class="sample-card-header">
+          <i class="fas fa-play-circle"></i>
+          Sample 5
+        </div>
+        <div class="sample-card-body">
+          <div class="sample-col">
+            <div class="sample-col-title sign-col">
+              <i class="fas fa-sign-language"></i> Sign Language Input
+            </div>
+            <video controls muted loop preload="metadata" style="max-height: 200px; object-fit: contain; background: #111;">
+              <source src="static/videos/samples/sample5_sign.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title baseline-col">
+              <i class="fas fa-minus-circle"></i> Two-Stage (Baseline)
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Text → TTS</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample5_2stage.wav" type="audio/wav">
+            </audio>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title ours-col">
+              <i class="fas fa-check-circle"></i> SignRecGAN (Ours) <span class="ours-badge">Ours</span>
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Speech with Prosody</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample5_ours.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample 6 -->
+      <div class="sample-card">
+        <div class="sample-card-header">
+          <i class="fas fa-play-circle"></i>
+          Sample 6
+        </div>
+        <div class="sample-card-body">
+          <div class="sample-col">
+            <div class="sample-col-title sign-col">
+              <i class="fas fa-sign-language"></i> Sign Language Input
+            </div>
+            <video controls muted loop preload="metadata" style="max-height: 200px; object-fit: contain; background: #111;">
+              <source src="static/videos/samples/sample6_sign.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title baseline-col">
+              <i class="fas fa-minus-circle"></i> Two-Stage (Baseline)
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Text → TTS</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample6_2stage.wav" type="audio/wav">
+            </audio>
+          </div>
+          <div class="sample-col">
+            <div class="sample-col-title ours-col">
+              <i class="fas fa-check-circle"></i> SignRecGAN (Ours) <span class="ours-badge">Ours</span>
+            </div>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Sign → Speech with Prosody</p>
+            <audio controls preload="none">
+              <source src="static/audio/sample6_ours.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      </div><!-- end carousel track -->
+    </div><!-- end carousel -->
+
+    <!-- Carousel Controls -->
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Previous sample">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <span class="carousel-counter" id="carouselCounter">1 / 6</span>
+      <button class="carousel-btn carousel-btn-next" aria-label="Next sample">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
+
   </div>
 </section>
-<!-- End youtube video -->
 
+<!-- ===== RESULTS ===== -->
+<section class="section section-padded" style="background: white;">
+  <div class="container is-max-desktop">
+    <h2 class="section-title-accent" style="text-align: center; margin-bottom: 0.5rem;">Experimental Results</h2>
+    <p style="text-align: center; color: #64748b; font-size: 0.95rem; margin-bottom: 2.5rem;">
+      Quantitative evaluation on expressiveness and naturalness of synthesized speech, with ablation study.
+    </p>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
+    <!-- Objective Table -->
+    <div class="results-table-wrapper">
+      <h3 style="font-size: 1.05rem; font-weight: 700; color: #334155; margin-bottom: 1.25rem;">
+        Table 1. Objective Evaluation — Expressiveness &amp; Naturalness
+      </h3>
+      <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">
+        Expressiveness is measured by pitch/energy standard deviation (closer to Real Speech = better). Naturalness by WER↓ and UTMOS↑.
+      </p>
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th rowspan="2" style="text-align:left; border-right: 2px solid #e2e8f0;">Method</th>
+            <th colspan="3" style="text-align:center; font-size:0.8rem; color:#94a3b8; font-weight:500; letter-spacing:0.05em; border-bottom: 1px solid #e2e8f0;">Losses</th>
+            <th colspan="2" style="border-left: 2px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">Expressiveness</th>
+            <th colspan="2" style="border-left: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">Naturalness</th>
+          </tr>
+          <tr>
+            <th style="font-size:0.8rem;">GAN</th>
+            <th style="font-size:0.8rem;">SignRec</th>
+            <th style="font-size:0.8rem; border-right: 2px solid #e2e8f0;">ProMo</th>
+            <th style="border-left: 2px solid #e2e8f0;">Pitch (→28.9)</th>
+            <th>Energy (→25.4)</th>
+            <th style="border-left: 1px solid #e2e8f0;">WER ↓</th>
+            <th>UTMOS ↑</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="real-speech-row">
+            <td>Real Speech</td>
+            <td>—</td><td>—</td><td style="border-right: 2px solid #e2e8f0;">—</td>
+            <td style="border-left: 2px solid #e2e8f0;">28.9</td>
+            <td>25.4</td>
+            <td style="border-left: 1px solid #e2e8f0;">0.04</td>
+            <td>4.07</td>
+          </tr>
+          <tr>
+            <td>Two-Stage (Baseline)</td>
+            <td>—</td><td>—</td><td style="border-right: 2px solid #e2e8f0;">—</td>
+            <td style="border-left: 2px solid #e2e8f0;" class="second-score">17.6</td>
+            <td>20.1</td>
+            <td style="border-left: 1px solid #e2e8f0;" class="second-score">0.293</td>
+            <td class="best-score">3.52</td>
+          </tr>
+          <tr>
+            <td>Ours (GAN only)</td>
+            <td><span class="loss-check">✓</span></td><td>—</td><td style="border-right: 2px solid #e2e8f0;">—</td>
+            <td style="border-left: 2px solid #e2e8f0;">48.4</td>
+            <td>44.6</td>
+            <td style="border-left: 1px solid #e2e8f0;"><strong>0.212</strong></td>
+            <td>3.29</td>
+          </tr>
+          <tr>
+            <td>Ours (GAN + SignRec)</td>
+            <td><span class="loss-check">✓</span></td><td><span class="loss-check">✓</span></td><td style="border-right: 2px solid #e2e8f0;">—</td>
+            <td style="border-left: 2px solid #e2e8f0;">44.2</td>
+            <td>39.7</td>
+            <td style="border-left: 1px solid #e2e8f0;">0.448</td>
+            <td>2.95</td>
+          </tr>
+          <tr>
+            <td>Ours (GAN + ProMo)</td>
+            <td><span class="loss-check">✓</span></td><td>—</td><td style="border-right: 2px solid #e2e8f0;"><span class="loss-check">✓</span></td>
+            <td style="border-left: 2px solid #e2e8f0;">45.3</td>
+            <td class="second-score">28.6</td>
+            <td style="border-left: 1px solid #e2e8f0;">0.623</td>
+            <td>3.03</td>
+          </tr>
+          <tr class="ours-full">
+            <td><strong>Ours (SignRecGAN — Full)</strong></td>
+            <td><span class="loss-check">✓</span></td><td><span class="loss-check">✓</span></td><td style="border-right: 2px solid #e2e8f0;"><span class="loss-check">✓</span></td>
+            <td style="border-left: 2px solid #e2e8f0;" class="best-score">33.7</td>
+            <td class="best-score">22.5</td>
+            <td style="border-left: 1px solid #e2e8f0;">0.325</td>
+            <td class="second-score">3.44</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.75rem;">
+        <strong>Bold</strong> = best; <u>underlined</u> = second-best. Arrow (→) indicates target value from Real Speech.
+      </p>
+    </div>
+
+    <!-- User Study Table -->
+    <div class="results-table-wrapper" style="margin-top: 2rem;">
+      <h3 style="font-size: 1.05rem; font-weight: 700; color: #334155; margin-bottom: 1.25rem;">
+        Table 2. User Study — CMOS Scores (SignRecGAN vs Two-Stage, n=17 participants)
+      </h3>
+      <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">
+        CMOS scores with 95% confidence intervals. <span style="background: #d1fae5; padding: 0.1rem 0.4rem; border-radius: 4px; color: #059669; font-weight: 600;">Green</span> = statistically significant improvement (p &lt; 0.05).
+      </p>
+      <table class="results-table user-study-table">
+        <thead>
+          <tr>
+            <th style="text-align:left; border-right: 1px solid #e2e8f0;">Criterion</th>
+            <th>Short<br><small style="font-weight:400; color:#94a3b8;">(3–8 words)</small></th>
+            <th>Medium<br><small style="font-weight:400; color:#94a3b8;">(9–13 words)</small></th>
+            <th>Long<br><small style="font-weight:400; color:#94a3b8;">(14–18 words)</small></th>
+            <th>Neutral<br><small style="font-weight:400; color:#94a3b8;">(low prosody)</small></th>
+            <th><strong>Total</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 700; border-right: 1px solid #e2e8f0;">Prosody Match</td>
+            <td>3.12 <small>(±0.22)</small></td>
+            <td class="sig-improve">3.19 <small>(±0.16)</small></td>
+            <td class="sig-improve">3.19 <small>(±0.16)</small></td>
+            <td>3.00 <small>(±0.18)</small></td>
+            <td class="sig-improve"><strong>3.17 <small>(±0.11)</small></strong></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; border-right: 1px solid #e2e8f0;">Naturalness</td>
+            <td>2.93 <small>(±0.17)</small></td>
+            <td>2.97 <small>(±0.17)</small></td>
+            <td>2.87 <small>(±0.15)</small></td>
+            <td>2.96 <small>(±0.15)</small></td>
+            <td>2.92 <small>(±0.11)</small></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 0.8rem; color: #64748b; margin-top: 0.75rem;">
+        SignRecGAN significantly outperforms the two-stage baseline in prosody match for medium and long utterances, while maintaining comparable naturalness. On neutral (low-prosody) samples, quality is preserved without degradation.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== QUALITATIVE ANALYSIS ===== -->
+<section class="section section-padded" style="background: #f8fafc;">
+  <div class="container is-max-desktop">
+    <h2 class="section-title-accent" style="text-align: center; margin-bottom: 0.5rem;">Qualitative Analysis</h2>
+    <p style="text-align: center; color: #64748b; font-size: 0.95rem; margin-bottom: 2.5rem;">
+      Mel spectrogram comparisons and word-level prominence analysis reveal<br>richer prosodic structure in SignRecGAN outputs.
+    </p>
+
+    <div class="qual-figure-row">
+      <div class="figure-container">
+        <img src="static/images/figures/mel_vis1.png" alt="Mel spectrogram comparison" loading="lazy">
+        <p class="figure-caption">
+          <strong>Fig. 6. Mel Spectrogram Comparison.</strong> For the phrase "I saw", the reference signer displays dynamic facial expressions and hand movements. SignRecGAN (right) captures the prosodic emphasis, while the two-stage baseline (middle) produces flat, unexpressive speech.
+        </p>
+      </div>
+      <div class="figure-container">
+        <img src="static/images/figures/prominence.png" alt="Word-level prominence analysis" loading="lazy">
+        <p class="figure-caption">
+          <strong>Fig. 7. Prominence Analysis.</strong> Using Wavelet Prosody Toolkit, we observe that SignRecGAN naturally emphasizes semantically important words (e.g., "annoying", "a lot") while avoiding emphasis on function words (e.g., "and"). This fine-grained prosodic behavior emerges from the combination of reconstruction losses and adversarial training.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== PAPER ===== -->
+<section class="section section-padded paper-embed-section">
+  <div class="container is-max-desktop">
+    <h2 class="section-title-accent" style="text-align: center; margin-bottom: 0.5rem;">Paper</h2>
+    <p style="text-align: center; color: #64748b; font-size: 0.95rem; margin-bottom: 2rem;">
+      Published at ICPR 2026
+    </p>
+    <div class="results-table-wrapper">
+      <iframe src="static/pdfs/paper.pdf" width="100%" height="600" style="border-radius: 8px; border: none;">
+      </iframe>
+      <div style="text-align: center; margin-top: 1.25rem;">
+        <a href="static/pdfs/paper.pdf" target="_blank" class="button is-dark is-rounded" style="background: linear-gradient(135deg, #667eea, #764ba2) !important; color: white !important; border: none !important; padding: 0.75rem 2rem !important;">
+          <span class="icon"><i class="fas fa-download"></i></span>
+          <span>Download PDF</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
+<!-- ===== BIBTEX ===== -->
+<section class="section section-padded" id="BibTeX" style="background: #f8fafc;">
+  <div class="container is-max-desktop">
+    <div class="bibtex-wrapper">
       <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
+        <h2 class="title is-4" style="margin: 0; font-weight: 800; color: #1e293b;">BibTeX</h2>
         <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
           <i class="fas fa-copy"></i>
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@inproceedings{manabe2026sign2speech,
+  title     = {Sign-to-Speech Prosody Transfer via Sign Reconstruction-based GAN},
+  author    = {Manabe, Toranosuke and Shibata, Yuto and Takamichi, Shinnosuke and Aoki, Yoshimitsu},
+  booktitle = {Proceedings of the International Conference on Pattern Recognition (ICPR)},
+  year      = {2026},
+  address   = {Keio University, Yokohama, Japan}
 }</code></pre>
     </div>
+  </div>
 </section>
-<!--End BibTex citation -->
 
-
-  <footer class="footer">
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
   <div class="container">
     <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
+      <div class="column is-8" style="text-align: center;">
+        <p style="color: #64748b; font-size: 0.9rem; line-height: 1.7;">
+          This page was built using the
+          <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+          <br>
+          © 2026 Keio University. Licensed under
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+        </p>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+<script>
+// Show/hide scroll-to-top button
+window.addEventListener('scroll', function() {
+  const btn = document.querySelector('.scroll-to-top');
+  if (window.pageYOffset > 400) {
+    btn.classList.add('visible');
+  } else {
+    btn.classList.remove('visible');
+  }
+});
 
-    <!-- End of Statcounter Code -->
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
-  </body>
-  </html>
+// Sample carousel
+(function() {
+  function init() {
+    const track = document.querySelector('.sample-carousel-track');
+    if (!track) return;
+
+    const slides = Array.from(track.querySelectorAll('.sample-card'));
+    const total = slides.length;
+    let current = 0;
+
+    const prevBtn = document.querySelector('.carousel-btn-prev');
+    const nextBtn = document.querySelector('.carousel-btn-next');
+    const dotsContainer = document.getElementById('carouselDots');
+    const counter = document.getElementById('carouselCounter');
+
+    // Create dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Sample ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(index) {
+      current = index;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+      counter.textContent = (current + 1) + ' / ' + total;
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+    }
+
+    prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+    nextBtn.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+
+    // Keyboard navigation when focused
+    document.querySelector('.sample-carousel').addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') goTo(Math.max(0, current - 1));
+      if (e.key === 'ArrowRight') goTo(Math.min(total - 1, current + 1));
+    });
+
+    goTo(0);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+function copyBibTeX() {
+  const el = document.getElementById('bibtex-code');
+  const btn = document.querySelector('.copy-bibtex-btn');
+  const copyText = btn.querySelector('.copy-text');
+  navigator.clipboard.writeText(el.textContent).then(function() {
+    btn.classList.add('copied');
+    copyText.textContent = 'Copied!';
+    setTimeout(function() {
+      btn.classList.remove('copied');
+      copyText.textContent = 'Copy';
+    }, 2000);
+  }).catch(function() {
+    const ta = document.createElement('textarea');
+    ta.value = el.textContent;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    copyText.textContent = 'Copied!';
+    setTimeout(function() { copyText.textContent = 'Copy'; }, 2000);
+  });
+}
+</script>
+
+</body>
+</html>
