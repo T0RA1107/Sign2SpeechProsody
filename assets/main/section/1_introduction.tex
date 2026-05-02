@@ -1,0 +1,105 @@
+\section{Introduction}
+\label{sec:introduction}
+%-----------------------------------
+Sign language serves as a principal means of communication for individuals with hearing impairments.
+Translating between sign language and spoken language is, 
+however, a complex task that typically requires specialized knowledge.
+Recently, sign-to-text translation methods based on deep learning have been developed~\cite{Camgoz_2020_CVPR,zhang2023sltunet,lin-etal-2023-gloss,Gong_2024_CVPR,NEURIPS2024_ced76a66}.
+These methods substantially simplify the process of bridging sign language and spoken language.
+
+\manabe{
+However, existing studies are all limited to sign-to-text conversion.
+Therefore, to convert sign language into speech using current methods, 
+one must rely on a decoupled process consisting of sign-to-text and text-to-speech (TTS). 
+In this pipeline, the intermediate text inevitably becomes a bottleneck, 
+causing non-verbal information present in the original sign, such as tension and emphasis, to be lost.
+Omitting these elements can result in speech that lacks expressiveness.
+}
+% Nonetheless, most existing sign language translation techniques focus on 
+% converting sign language to text, rather than directly synthesizing speech.
+% Consequently, obtaining speech from sign language models~\cite{Zhou2020Sign-to-speech,Sharma2020Sign,Dangat2023Sign,Ojha2020Sign,R2022Indian} generally involves a 2-stage pipeline --- sign-to-text followed by text-to-speech.
+% This approach introduces a significant shortcoming: because only text is used as the intermediate representation, the rich prosodic information inherent in sign language (e.g., emotion and emphasis~\cite{Brentari2015The}) is lost.
+% Omitting these elements can result in speech that lacks expressiveness.
+
+To fill this gap, we propose a novel task,
+\emph{sign-to-speech prosody transfer}
+to incorporate the global prosody embedded in sign language into speech synthesis process.
+\manabe{
+This task can be seen as an extension of existing 
+cross-lingual prosody transfer~\cite{swiatkowski23_interspeech}.
+While the existing task aims to transfer prosody 
+from source spoken language to target one, 
+our task transfers from source \textit{sign language}.
+% This task is one of the classes of cross-lingual prosody transfer~\cite{},
+% which aims to transfer global prosody style of the speech of source language into the speech of target language.
+}
+
+\shibata{
+Here, translating between sign language and speech requires highly specialized expertise.
+Consequently, constructing large-scale paired datasets is much more difficult than in other multi-modal transformation problems such as text-to-image~\cite{Rombach_2022_CVPR}, where massive paired data are readily available.
+}
+\manabe{ 
+Moreover, both sign language and speech are time-series data, 
+and creating annotations that take their temporal alignment into account is even more challenging.
+}
+% Achieving this task entails overcoming three major difficulties.
+% (i) Speech prosody itself is complex, making it extraordinarily challenging to learn its underlying distribution accurately.
+% (ii) Constructing a paired dataset that precisely annotates both sign language and speech requires extensive expertise, and existing datasets remain limited in size.
+% (iii) No established technique directly aligns prosodic features between sign language and speech, and the relationship itself is highly intricate and subtle.
+
+% \manabe{
+% To address these challenges, in this paper, we propose \emph{SignRecGAN}, 
+% a method for converting global prosody from sign language into speech 
+% using separate \emph{unimodal datasets} of sign and speech,
+% together with \emph{S2PFormer}, a model architecture designed for this task. 
+% SignRecGAN combines adversarial learning with reconstruction losses,
+% \emph{SignRec loss} (Sign Reconstruction loss) and \emph{ProMo loss} (Prosody-Motion alignment Loss), which recover motion information of sign language from speech, 
+% thereby enabling the motion expressed in signing to be reflected in natural-sounding speech. 
+% S2PFormer augments a pretrained TTS model 
+% with a carefully designed additional cross-attention branch, 
+% achieving speech synthesis that incorporates sign information 
+% while preserving the original high speech quality.
+% }
+\shibata{
+To address these challenges, in this paper we propose \emph{SignRecGAN}, 
+a method for converting global prosody from sign language into speech 
+using separate \emph{unpaired unimodal datasets} of sign and speech,
+together with \emph{S2PFormer}, a \underline{S}ign-to-\underline{P}rosody Trans\underline{former} 
+designed for high-quality prosody-aware speech synthesis.  
+SignRecGAN combines adversarial learning with reconstruction losses,
+\emph{SignRec loss} (Sign Reconstruction loss) and \emph{ProMo loss} (Prosody-Motion alignment loss), 
+which explicitly force the model to reconstruct motion information of sign language from speech, 
+thereby enabling the motion expressed in signing to be reflected in natural-sounding speech. 
+S2PFormer treats a large-scale pretrained TTS model as the base speech synthesis module 
+and augments it with a carefully designed additional cross-attention branch, 
+achieving speech synthesis that incorporates sign information 
+while preserving the original high speech quality. These training strategy and model design are highly scalable, 
+because \emph{SignRecGAN} leverages annotation-free unpaired unimodal datasets 
+while \emph{S2PFormer} reuse a large-scale pretrained TTS model as a base speech synthesizer. 
+}
+% To address these challenges, we propose a novel model called \textbf{S2PFormer} (Sign-to-Prosody Transformer). For challenge (i), our approach leverages representations from a pre-trained text-to-speech (TTS) model~\cite{ren2021fastspeech}.
+% Through a carefully designed integration strategy, it injects sign language motion information without degrading the high-quality speech synthesis.
+% For challenge (ii), our method adopts a scalable learning approach using unimodal, unpaired datasets for both sign language~\cite{shi-etal-2022-open} and speech~\cite{VCTK} modalities, even though they lack direct correspondences. In this setting, we tackle challenge (iii) by introducing two new loss functions. The first, SignRec Loss (Sign Reconstruction Loss), guides the model to reconstruct the original sign motion from the synthesized speech, enabling speech synthesis that faithfully reflects sign language. The second, ProMo Loss (Prosody-Motion Alignment Loss), facilitates alignment between the low level motions in sign language and prosodic features in speech based on prior knowledge. By combining these losses, our method achieves stable training despite the absence of explicit alignment between sign language and speech.
+
+We validate the effectiveness of the SignRecGAN through a qualitative evaluation, 
+demonstrating that the resulting speech reflects 
+a richer range of expressions compared to the conventional two-stage approach.
+\manabe{CMOS} user study also confirms that our method can synthesize emotionally nuanced speech. 
+In ablation studies, we show that the guidance for reconstructing sign language motion 
+contributes to prosodic representation, supporting the soundness of our system design.
+
+In summary, our main contributions are as follows:
+\begin{itemize}
+% \item We propose a novel model, \textbf{S2PFormer}, for our proposed task ``sign-to-speech prosody transfer''. By fusing sign language motion information with pre-trained TTS representations, our method preserves crucial expressiveness that would otherwise be lost in conventional 2-stage pipelines.
+\item \manabe{We propose a novel task \emph{sign-to-speech prosody transfer}
+to incorporate the global prosody embedded in sign language into speech synthesis process.
+For this task, we introduce \emph{SignRecGAN}, 
+an adversarial \shibata{and reconstruction-based learning} framework using separate \emph{unimodal datasets} of sign and speech. We also propose \emph{S2PFormer}, an augmented pretrained TTS model 
+with a carefully designed additional cross-attention branch.
+}
+\item \shibata{For reconstruction-based learning}, we propose \emph{SignRec loss} and \emph{ProMo loss} to address the absence of directly aligned sign and speech data.
+SignRec loss ensures that the synthesized speech retains the nuances of sign language by reconstructing original sign motions,
+while ProMo loss aligns the distributions of sign language and synthesized speech.
+These two components ensure proper integration of sign language cues into speech synthesis and enhance overall consistency.
+\item Through user studies and quantitative assessments, we demonstrate that our system captures a broader range of emphatic cues compared to existing pipelines, resulting in more expressive and natural speech.
+\end{itemize}

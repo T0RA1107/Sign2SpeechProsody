@@ -1,0 +1,133 @@
+\relax 
+\providecommand\zref@newlabel[2]{}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Camgoz_2020_CVPR,zhang2023sltunet,lin-etal-2023-gloss,Gong_2024_CVPR,NEURIPS2024_ced76a66}
+\@writefile{toc}{\contentsline {title}{ Sign-to-Speech Prosody Transfer \unskip \ \ignorespaces  via Sign Reconstruction-based GAN }{1}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\authcount {4}}
+\@writefile{toc}{\contentsline {author}{Toranosuke Manabe \and Yuto Shibata \and Shinnosuke Takamichi \and Yoshimitsu Aoki }{1}{chapter.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  In the reference sign language video (left), the first phrase, ``many Italians,'' is emphasized through rapid hand movements and facial expressions. The two-stage baseline (middle) fails to reflect this prosody, whereas our approach (right) successfully captures the emphasis on ``many.''}}{1}{figure.1.1}\protected@file@percent }
+\newlabel{fig:pipeline}{{1}{1}{In the reference sign language video (left), the first phrase, ``many Italians,'' is emphasized through rapid hand movements and facial expressions. The two-stage baseline (middle) fails to reflect this prosody, whereas our approach (right) successfully captures the emphasis on ``many.''}{figure.1.1}{}}
+\citation{swiatkowski23_interspeech}
+\citation{Rombach_2022_CVPR}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1.1}\protected@file@percent }
+\newlabel{sec:introduction}{{1}{2}{Introduction}{section.1.1}{}}
+\citation{Brentari2015The}
+\citation{Wilbur1999}
+\citation{Limousin2010}
+\citation{Wilbur1999}
+\citation{Zhou2020Sign-to-speech,Sharma2020Sign,Dangat2023Sign}
+\citation{Ojha2020Sign,R2022Indian}
+\citation{karlapati20_interspeech,klimkov19_interspeech}
+\citation{pmlr-v80-skerry-ryan18a,swiatkowski23_interspeech}
+\citation{swiatkowski23_interspeech}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.1.2}\protected@file@percent }
+\newlabel{sec:related_work}{{2}{3}{Related Work}{section.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Prosody in Sign Language}{3}{subsection.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Sign-to-Speech}{3}{subsection.1.2.2}\protected@file@percent }
+\citation{Duarte_2021_CVPR}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Prosody Transfer}{4}{subsection.1.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Dataset of Sign Language with Speech}{4}{subsection.1.2.4}\protected@file@percent }
+\newlabel{sec:paired_dataset}{{2.4}{4}{Dataset of Sign Language with Speech}{subsection.1.2.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{4}{section.1.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{4}{Method}{section.1.3}{}}
+\citation{ren2021fastspeech}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The proposed learning framework of SignRecGAN.}}{5}{figure.1.2}\protected@file@percent }
+\newlabel{fig:overview}{{2}{5}{The proposed learning framework of SignRecGAN}{figure.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}S2PFormer}{5}{subsection.1.3.1}\protected@file@percent }
+\newlabel{sec:ts2s}{{3.1}{5}{S2PFormer}{subsection.1.3.1}{}}
+\citation{lin-etal-2023-gloss}
+\citation{Chen_2021_ICCV}
+\citation{Liu_2020_CVPR}
+\citation{shazeer2017outrageouslylargeneuralnetworks}
+\citation{NIPS2017_3f5ee243}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The architecture of S2PFormer. S2PFormer extends FastSpeech2 by incorporating sign language information through a module called AdaPM. Specifically, the visual backbone converts sign language inputs into feature representations, which are then fed into AdaPM. Conditioned on these representations, the variance predictor estimates speech prosody parameters, which the prosody estimator uses to predict the original sign language prosody.}}{6}{figure.1.3}\protected@file@percent }
+\newlabel{fig:ts2s}{{3}{6}{The architecture of S2PFormer. S2PFormer extends FastSpeech2 by incorporating sign language information through a module called AdaPM. Specifically, the visual backbone converts sign language inputs into feature representations, which are then fed into AdaPM. Conditioned on these representations, the variance predictor estimates speech prosody parameters, which the prosody estimator uses to predict the original sign language prosody}{figure.1.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Adaptive Prosody Mixer}}{7}{figure.1.4}\protected@file@percent }
+\newlabel{fig:adapm}{{4}{7}{Adaptive Prosody Mixer}{figure.1.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces An example of sign language prosody labels. The histograms represent the distribution of hand and face motion information in sign language videos.}}{7}{figure.1.5}\protected@file@percent }
+\newlabel{fig:sign_label}{{5}{7}{An example of sign language prosody labels. The histograms represent the distribution of hand and face motion information in sign language videos}{figure.1.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}SignRec Loss}{7}{subsection.1.3.2}\protected@file@percent }
+\newlabel{sec:prosody_rec}{{3.2}{7}{SignRec Loss}{subsection.1.3.2}{}}
+\citation{Wilbur1999,Limousin2010}
+\citation{Mao_2017_ICCV}
+\newlabel{eq:sign_rec}{{4}{8}{SignRec Loss}{equation.1.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}ProMo Loss}{8}{subsection.1.3.3}\protected@file@percent }
+\newlabel{sec:PGR}{{3.3}{8}{ProMo Loss}{subsection.1.3.3}{}}
+\newlabel{eq:pro_mo}{{5}{8}{ProMo Loss}{equation.1.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Training and Inference}{8}{subsection.1.3.4}\protected@file@percent }
+\newlabel{sec:training_and_inference}{{3.4}{8}{Training and Inference}{subsection.1.3.4}{}}
+\citation{shi-etal-2022-open}
+\newlabel{eq:natural}{{10}{9}{Training and Inference}{equation.1.3.10}{}}
+\citation{VCTK}
+\citation{mmpose}
+\citation{mfa}
+\citation{loshchilov2018decoupled}
+\citation{swiatkowski23_interspeech}
+\citation{kharitonov-etal-2022-text}
+\citation{saeki22c_interspeech}
+\citation{radford2022whisper}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{10}{section.1.4}\protected@file@percent }
+\newlabel{sec:experiments}{{4}{10}{Experiments}{section.1.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Experimental Setup}{10}{subsection.1.4.1}\protected@file@percent }
+\newlabel{subsec:datasets}{{4.1}{10}{Dataset}{section*.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Dataset}{10}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Dataset Preprocessing}{10}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Network Details}{10}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Evaluation Method}{10}{section*.5}\protected@file@percent }
+\citation{DBLP:journals/corr/SuniAV15}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Objective evaluation. The best scores are highlighted in \textbf  {bold}, and the second-best scores are \underline  {underlined}.}}{11}{table.1.1}\protected@file@percent }
+\newlabel{tab:objective}{{1}{11}{Objective evaluation. The best scores are highlighted in \textbf {bold}, and the second-best scores are \underline {underlined}}{table.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Objective Evaluation}{11}{subsection.1.4.2}\protected@file@percent }
+\citation{DBLP:journals/corr/SuniAV15}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces The CMOS of the user study with 95\% confidence intervals. The scores with statistically significant improvements are highlighted in \colorbox {lightgreen}{green}.}}{12}{table.1.2}\protected@file@percent }
+\newlabel{tab:user_study}{{2}{12}{The CMOS of the user study with 95\% confidence intervals. The scores with statistically significant improvements are highlighted in \colorbox {lightgreen}{green}}{table.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces An example of input sign language video (left) and synthesized speech (right).}}{12}{figure.1.6}\protected@file@percent }
+\newlabel{fig:mel_ex1}{{6}{12}{An example of input sign language video (left) and synthesized speech (right)}{figure.1.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Ablation Study}{12}{subsection.1.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}User Study}{12}{subsection.1.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Qualitative Evaluation}{12}{subsection.1.4.5}\protected@file@percent }
+\newlabel{sec:qualitative}{{4.5}{12}{Qualitative Evaluation}{subsection.1.4.5}{}}
+\bibstyle{splncs04}
+\bibdata{main}
+\bibcite{Brentari2015The}{1}
+\bibcite{Camgoz_2020_CVPR}{2}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Prominence analysis results. A black line on a spectrogram indicates emphasis, and the corresponding word is labeled on the spectrogram. The size of a labeled word indicates the intensity of the emphasis.}}{13}{figure.1.7}\protected@file@percent }
+\newlabel{fig:prominece}{{7}{13}{Prominence analysis results. A black line on a spectrogram indicates emphasis, and the corresponding word is labeled on the spectrogram. The size of a labeled word indicates the intensity of the emphasis}{figure.1.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Emergence of Emphasis on Natural Words}{13}{subsection.1.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{13}{section.1.5}\protected@file@percent }
+\newlabel{sec:conclusion}{{5}{13}{Conclusion}{section.1.5}{}}
+\bibcite{Chen_2021_ICCV}{3}
+\bibcite{mmpose}{4}
+\bibcite{Dangat2023Sign}{5}
+\bibcite{Duarte_2021_CVPR}{6}
+\bibcite{Gong_2024_CVPR}{7}
+\bibcite{karlapati20_interspeech}{8}
+\bibcite{kharitonov-etal-2022-text}{9}
+\bibcite{klimkov19_interspeech}{10}
+\bibcite{Limousin2010}{11}
+\bibcite{lin-etal-2023-gloss}{12}
+\bibcite{Liu_2020_CVPR}{13}
+\bibcite{loshchilov2018decoupled}{14}
+\bibcite{Mao_2017_ICCV}{15}
+\bibcite{mfa}{16}
+\bibcite{Ojha2020Sign}{17}
+\bibcite{R2022Indian}{18}
+\bibcite{radford2022whisper}{19}
+\bibcite{ren2021fastspeech}{20}
+\bibcite{Rombach_2022_CVPR}{21}
+\bibcite{saeki22c_interspeech}{22}
+\bibcite{Sharma2020Sign}{23}
+\bibcite{shazeer2017outrageouslylargeneuralnetworks}{24}
+\bibcite{shi-etal-2022-open}{25}
+\bibcite{pmlr-v80-skerry-ryan18a}{26}
+\bibcite{DBLP:journals/corr/SuniAV15}{27}
+\bibcite{swiatkowski23_interspeech}{28}
+\bibcite{NIPS2017_3f5ee243}{29}
+\bibcite{Wilbur1999}{30}
+\bibcite{VCTK}{31}
+\bibcite{zhang2023sltunet}{32}
+\bibcite{NEURIPS2024_ced76a66}{33}
+\bibcite{Zhou2020Sign-to-speech}{34}
+\gdef \@abspage@last{15}

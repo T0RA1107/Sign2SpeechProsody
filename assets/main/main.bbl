@@ -1,0 +1,108 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{Brentari2015The}
+Brentari, D., Falk, J., Wolford, G.: The acquisition of prosody in american sign language. Language  \textbf{91},  e144 -- e168 (2015)
+
+\bibitem{Camgoz_2020_CVPR}
+Camgoz, N.C., Koller, O., Hadfield, S., Bowden, R.: Sign language transformers: Joint end-to-end sign language recognition and translation. In: CVPR (June 2020)
+
+\bibitem{Chen_2021_ICCV}
+Chen, Y., Zhang, Z., Yuan, C., Li, B., Deng, Y., Hu, W.: Channel-wise topology refinement graph convolution for skeleton-based action recognition. In: Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV). pp. 13359--13368 (October 2021)
+
+\bibitem{mmpose}
+Contributors, M.: Openmmlab pose estimation toolbox and benchmark (2020)
+
+\bibitem{Dangat2023Sign}
+Dangat, P.M.T.: Sign language to speech conversion. International Journal for Research in Applied Science and Engineering Technology  (2023)
+
+\bibitem{Duarte_2021_CVPR}
+Duarte, A., Palaskar, S., Ventura, L., Ghadiyaram, D., DeHaan, K., Metze, F., Torres, J., Giro-i Nieto, X.: How2sign: A large-scale multimodal dataset for continuous american sign language. In: CVPR. pp. 2735--2744 (June 2021)
+
+\bibitem{Gong_2024_CVPR}
+Gong, J., Foo, L.G., He, Y., Rahmani, H., Liu, J.: Llms are good sign language translators. In: CVPR. pp. 18362--18372 (June 2024)
+
+\bibitem{karlapati20_interspeech}
+Karlapati, S., Moinet, A., Joly, A., Klimkov, V., Sáez-Trigueros, D., Drugman, T.: Copycat: Many-to-many fine-grained prosody transfer for neural text-to-speech. In: Interspeech 2020. pp. 4387--4391 (2020)
+
+\bibitem{kharitonov-etal-2022-text}
+Kharitonov, E., Lee, A., Polyak, A., Adi, Y., Copet, J., Lakhotia, K., Nguyen, T.A., Riviere, M., Mohamed, A., Dupoux, E., Hsu, W.N.: Text-free prosody-aware generative spoken language modeling. In: Muresan, S., Nakov, P., Villavicencio, A. (eds.) Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). pp. 8666--8681. Association for Computational Linguistics, Dublin, Ireland (May 2022)
+
+\bibitem{klimkov19_interspeech}
+Klimkov, V., Ronanki, S., Rohnke, J., Drugman, T.: Fine-grained robust prosody transfer for single-speaker neural text-to-speech. In: Interspeech 2019. pp. 4440--4444 (2019)
+
+\bibitem{Limousin2010}
+Limousin, F., Blondel, M.: Prosodie et acquisition de la langue des signes française. Language, Interaction and Acquisition  (01 2010)
+
+\bibitem{lin-etal-2023-gloss}
+Lin, K., Wang, X., Zhu, L., Sun, K., Zhang, B., Yang, Y.: Gloss-free end-to-end sign language translation. In: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). pp. 12904--12916. Association for Computational Linguistics, Toronto, Canada (Jul 2023)
+
+\bibitem{Liu_2020_CVPR}
+Liu, Z., Zhang, H., Chen, Z., Wang, Z., Ouyang, W.: Disentangling and unifying graph convolutions for skeleton-based action recognition. In: CVPR (June 2020)
+
+\bibitem{loshchilov2018decoupled}
+Loshchilov, I., Hutter, F.: Decoupled weight decay regularization. In: International Conference on Learning Representations (2019)
+
+\bibitem{Mao_2017_ICCV}
+Mao, X., Li, Q., Xie, H., Lau, R.Y., Wang, Z., Paul~Smolley, S.: Least squares generative adversarial networks. In: Proceedings of the IEEE International Conference on Computer Vision (ICCV) (Oct 2017)
+
+\bibitem{mfa}
+McAuliffe, M., Socolof, M., Mihuc, S., Wagner, M., Sonderegger, M.: Montreal forced aligner: Trainable text-speech alignment using kaldi. pp. 498--502 (08 2017)
+
+\bibitem{Ojha2020Sign}
+Ojha, A., Pandey, A., Maurya, S., Thakur, A., Dayananda, P.: Sign language to text and speech translation in real time using convolutional neural network. International journal of engineering research and technology  \textbf{8} (2020)
+
+\bibitem{R2022Indian}
+R, S., Hegde, S.R., K, C., Priyesh, A., Manjunath, A.S., Arunakumari, B.: Indian sign language to speech conversion using convolutional neural network. 2022 IEEE 2nd Mysore Sub Section International Conference (MysuruCon) pp.~1--5 (2022)
+
+\bibitem{radford2022whisper}
+Radford, A., Kim, J.W., Xu, T., Brockman, G., McLeavey, C., Sutskever, I.: Robust speech recognition via large-scale weak supervision (2022)
+
+\bibitem{ren2021fastspeech}
+Ren, Y., Hu, C., Tan, X., Qin, T., Zhao, S., Zhao, Z., Liu, T.Y.: Fastspeech 2: Fast and high-quality end-to-end text to speech. In: International Conference on Learning Representations (2021)
+
+\bibitem{Rombach_2022_CVPR}
+Rombach, R., Blattmann, A., Lorenz, D., Esser, P., Ommer, B.: High-resolution image synthesis with latent diffusion models. In: CVPR. pp. 10684--10695 (June 2022)
+
+\bibitem{saeki22c_interspeech}
+Saeki, T., Xin, D., Nakata, W., Koriyama, T., Takamichi, S., Saruwatari, H.: Utmos: Utokyo-sarulab system for voicemos challenge 2022. In: Interspeech 2022. pp. 4521--4525 (2022)
+
+\bibitem{Sharma2020Sign}
+Sharma, A., Panda, S., Verma, S.: Sign language to speech translation. 2020 11th International Conference on Computing, Communication and Networking Technologies (ICCCNT) pp.~1--8 (2020)
+
+\bibitem{shazeer2017outrageouslylargeneuralnetworks}
+Shazeer, N., Mirhoseini, A., Maziarz, K., Davis, A., Le, Q., Hinton, G., Dean, J.: Outrageously large neural networks: The sparsely-gated mixture-of-experts layer (2017)
+
+\bibitem{shi-etal-2022-open}
+Shi, B., Brentari, D., Shakhnarovich, G., Livescu, K.: Open-domain sign language translation learned from online video. In: Goldberg, Y., Kozareva, Z., Zhang, Y. (eds.) Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing. pp. 6365--6379. Association for Computational Linguistics, Abu Dhabi, United Arab Emirates (Dec 2022)
+
+\bibitem{pmlr-v80-skerry-ryan18a}
+Skerry-Ryan, R., Battenberg, E., Xiao, Y., Wang, Y., Stanton, D., Shor, J., Weiss, R., Clark, R., Saurous, R.A.: Towards end-to-end prosody transfer for expressive speech synthesis with tacotron. In: Dy, J., Krause, A. (eds.) Proceedings of the 35th International Conference on Machine Learning. Proceedings of Machine Learning Research, vol.~80, pp. 4693--4702. PMLR (10--15 Jul 2018)
+
+\bibitem{DBLP:journals/corr/SuniAV15}
+Suni, A., Aalto, D., Vainio, M.: Hierarchical representation of prosody for statistical speech synthesis. CoRR  \textbf{abs/1510.01949} (2015)
+
+\bibitem{swiatkowski23_interspeech}
+Swiatkowski, J., Wang, D., Babianski, M., {Lumban Tobing}, P., Vipperla, R., Pollet, V.: Cross-lingual prosody transfer for expressive machine dubbing. In: Interspeech 2023. pp. 4838--4842 (2023)
+
+\bibitem{NIPS2017_3f5ee243}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L.u., Polosukhin, I.: Attention is all you need. In: Guyon, I., Luxburg, U.V., Bengio, S., Wallach, H., Fergus, R., Vishwanathan, S., Garnett, R. (eds.) Advances in Neural Information Processing Systems. vol.~30. Curran Associates, Inc. (2017)
+
+\bibitem{Wilbur1999}
+Wilbur, R.: Stress in- asl: Empirical evidence and linguistic issues. Language and speech  \textbf{42 ( Pt 2-3)},  229--50 (04 1999)
+
+\bibitem{VCTK}
+Yamagishi, J., Veaux, C., MacDonald, K.: Cstr vctk corpus: English multi-speaker corpus for cstr voice cloning toolkit (2017)
+
+\bibitem{zhang2023sltunet}
+Zhang, B., M{\"u}ller, M., Sennrich, R.: {SLTUNET}: A simple unified model for sign language translation. In: The Eleventh International Conference on Learning Representations (2023)
+
+\bibitem{NEURIPS2024_ced76a66}
+Zhang, B., Tanzer, G., Firat, O.: Scaling sign language translation. In: Globerson, A., Mackey, L., Belgrave, D., Fan, A., Paquet, U., Tomczak, J., Zhang, C. (eds.) Advances in Neural Information Processing Systems. vol.~37, pp. 114018--114047. Curran Associates, Inc. (2024)
+
+\bibitem{Zhou2020Sign-to-speech}
+Zhou, Z., Chen, K., Li, X., Zhang, S., Wu, Y., Zhou, Y., Meng, K., Sun, C., He, Q., Fan, W., Fan, E., Lin, Z., Tan, X., Deng, W., Yang, J., Chen, J.: Sign-to-speech translation using machine-learning-assisted stretchable sensor arrays. Nature Electronics  \textbf{3},  571 -- 578 (2020)
+
+\end{thebibliography}

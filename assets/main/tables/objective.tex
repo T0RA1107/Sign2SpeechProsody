@@ -1,0 +1,24 @@
+\begin{table}[t]\fontsize{10pt}{10pt}\selectfont
+    \centering
+    \caption{Objective evaluation. 
+    % Expressiveness is considered better the closer its values to those of real speech. 
+    The best scores are highlighted in \textbf{bold}, and the second-best scores are \underline{underlined}.}
+    \label{tab:objective}
+    \vspace{-3mm}
+    \begin{tabular}[t]{lccccccc}
+    \toprule
+      &&&& \multicolumn{2}{c}{Expressiveness} & \multicolumn{2}{c}{Naturalness} \\
+    Method & $\mathcal{L}_{\mathrm{natural}}$ & $\mathcal{L}_{\mathrm{SignRec}}$ & $\mathcal{L}_{\mathrm{ProMo}}$ & Pitch($\rightarrow$) & Energy($\rightarrow$) & WER($\downarrow$) & UTMOS($\uparrow$) \\
+    \midrule
+    Real Speech &  &  &  & 28.9 & 25.4 & 0.04 & 4.07 \\
+    \midrule
+    two-stage &  &  &  & \underline{17.6} & 20.1 & \underline{0.293} & \textbf{3.52} \\
+    \midrule
+    \multirow{4}{*}{Ours} & \Checkmark &  &  & 48.4 & 44.6 & \textbf{0.212} & 3.29 \\
+     & \Checkmark & \Checkmark &  & 44.2 & 39.7 & 0.448 & 2.95 \\
+     & \Checkmark &  & \Checkmark   & 45.3 & \underline{28.6} & 0.623 & 3.03 \\
+     & \Checkmark & \Checkmark & \Checkmark                  & \textbf{33.7} & \textbf{22.5} & 0.325 & \underline{3.44}\\
+    \bottomrule
+    \end{tabular}
+    \vspace{-4mm}
+\end{table}

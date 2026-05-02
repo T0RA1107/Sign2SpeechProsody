@@ -1,0 +1,25 @@
+\section{Conclusion}
+\label{sec:conclusion}
+In this study, we tackled a novel task \emph{Sign-to-Speech Prosody Transfer}, 
+which seeks to transfer sign language prosody into synthesized speech. 
+\manabe{
+% This task poses multiple challenges, 
+% including the lack of a high-quality dataset that aligns sign language with speech, 
+% and the extremely complex correspondence between the two modalities.
+The major challenge for this task is the lack of datasets that align sign and speech.
+Constructing such datasets requires expert knowledge, making annotation extremely costly.
+To address this challenge, 
+we introduce \emph{SignRecGAN}, 
+a training framework utilizing unimodal datasets of speech and sign language 
+through adversarial learning and reconstruction loss.
+}
+% we proposed a learning framework that utilizes unpaired unimodal datasets of speech and sign language.
+% Our approach combines prosody reconstruction and regularization grounded in prior knowledge of prosody. 
+Through quantitative evaluation and user studies, 
+we demonstrated that the proposed method can produce speech 
+that better reflects the sign language prosody.
+% \noindent{\bf Limitations}
+
+% \noindent{\bf Quantitative evaluation:} Since there is no existing method to measure how the prosody of synthesized speech matches that of sign language, we have to rely on a limited set of performance aspects.
+
+% \noindent{\bf Emotion understanding:} Because our proposed sign language prosody labels only incorporate lower level metrics such as velocity and acceleration, they may not adequately capture higher level attributes like emotion. We will investigate modeling incorporating richer emotional information in future work.

@@ -1,0 +1,65 @@
+\section{Related Work}
+\label{sec:related_work}
+\subsection{Prosody in Sign Language}
+Just as spoken language prosody conveys emphasis or emotion in a sentence, sign language also exhibits prosodic features. The prosody of sign language is expressed through  the speed and amplitude of hand movements, as well as facial expressions. Moreover, there is a correspondence between sign language motion and spoken language~\cite{Brentari2015The}. For instance, the length of a sign is similar to the duration of speech~\cite{Wilbur1999}, the peak velocity of a sign is analogous to pitch~\cite{Limousin2010}, and the movement displacement is similar to speech intensity~\cite{Wilbur1999}. However, because the correspondence in prosody between sign language and speech is extremely complex and subtle, converting prosody from sign language to speech based on predefined rules is difficult. As a result, no research currently exists that reflects sign language prosody in speech synthesis.
+
+% \subsection{Text-to-Speech}
+% TTS refers to technologies that convert text into speech. In recent years, high-quality speech synthesis has been realized through deep learning techniques. FastSpeech2~\cite{ren2021fastspeech} predicts duration, pitch, and energy (factors related to speech prosody) through the Variance Adaptor module, enabling more natural speech synthesis. Although FastSpeech2 synthesizes speech by predicting prosody from text, recent research has also shown approaches that control TTS prediction by extracting prosody from modalities other than text.
+% For instance, prior work includes cross language translation that preserves prosody~\cite{swiatkowski23_interspeech} and dubbing that captures a speaker’s emotion and pose from facial video~\cite{yang23c_interspeech}.
+% % For example, there is a study that obtains prosodic representations of speech through self-supervised learning, making it possible to translate to another language while preserving original prosody~\cite{swiatkowski23_interspeech}.
+% % There is also research that extracts emotion and posture from the speaker’s facial video, thereby performing dubbing while preserving prosody~\cite{yang23c_interspeech}.
+% In this work, we aim to control speech synthesis using sign language by building upon FastSpeech2.
+
+\subsection{Sign-to-Speech}
+Sign-to-speech collectively refers to the technologies that convert sign language into speech, and in recent years, many such studies have been conducted. However, these studies mainly focus on a two-stage approach of first converting sign language to text, followed by converting text to speech. Examples include proposals of devices for sign language recognition~\cite{Zhou2020Sign-to-speech,Sharma2020Sign,Dangat2023Sign} and image recognition-based deep learning approaches that prioritize higher speeds and better accuracy~\cite{Ojha2020Sign,R2022Indian}. Consequently, there is no established method that integrates sign language prosody into speech.
+
+\subsection{Prosody Transfer}
+\manabe{
+Prosody transfer refers to techniques that condition
+a TTS system on a reference speech signal 
+so that its prosodic characteristic, such as pitch, energy, speaking rate, and pause patterns are reflected in the synthesized output.
+Depending on whether the textual content of the reference and target utterances is identical, 
+different strategies have been explored. 
+When the text is the same, some studies attempt fine-grained,
+word-level prosody transfer by aligning prosodic patterns to the linguistic units~\cite{karlapati20_interspeech,klimkov19_interspeech}.
+In contrast, when the text differs, most methods operate at the level of global prosody~\cite{pmlr-v80-skerry-ryan18a,swiatkowski23_interspeech}, 
+summarizing the overall speaking style of the reference utterance into a single representation. 
+The same tendency holds in cross-lingual scenarios~\cite{swiatkowski23_interspeech}, 
+even when parallel translations are available: 
+constructing cleanly aligned, word- or phone-level prosody labels across languages is extremely challenging,
+so utterance-level global prosody transfer remains the dominant approach. 
+In sign-to-speech, the primary goal is to convey the signer’s overall expressive intent,
+rather than to reproduce fine-grained prosodic details.
+Therefore, as a first step, we formulate our task as global prosody transfer, 
+where the reference sign is summarized into an utterance-level representation that conditions speech synthesis.
+% Fine-grained, word- or phone-level transfer is an important direction, 
+% but it typically relies on precise alignment between linguistic units and prosodic patterns,
+% which is difficult to obtain reliably across modalities.
+% In our proposed task as well, 
+% creating data with precisely aligned prosody across modalities is highly impractical,
+% and we therefore focus on modeling and transferring global prosody.
+}
+
+\subsection{Dataset of Sign Language with Speech}
+\label{sec:paired_dataset}
+How2Sign~\cite{Duarte_2021_CVPR} is a multimodal dataset for American Sign Language (ASL) and is currently the only dataset providing a pair of ASL and English speech.
+However, there are two major problems for sign-to-speech training.
+First, the audio collected from YouTube is often not clean, 
+and because there are numerous speakers in the dataset, 
+the methods for speech modeling become limited.
+% There is also a risk that the original videos might become unavailable.
+Second, the dataset lacks a correspondence in prosody between the sign language and speech. 
+Although the sign language was performed after viewing the original video,
+six of the eleven signers in the dataset creation had hearing difficulties;
+therefore, the sign language prosody does not necessarily reflect the original speech prosody.
+In general, creating a paired dataset for sign language and speech requires 
+careful production by annotators with specialized knowledge,
+which limits both dataset scale and alignment quality.
+% Accordingly, when applying deep learning to speech--sign language translation tasks, it is considered effective to harness unpaired datasets for each modality in order to expand the scale of training.
+
+% \subsection{Unpaired Multimodal Learning}
+% For high scalability, unpaired learning combining multiple unimodal datasets has been researched actively.
+% CycleGAN~\cite{CycleGAN2017} is a representative unpaired learning method that jointly trains bidirectional mappings by cycle consistency, which ensures the generated image from one modality can be reconstructed to the original image.
+% On the other hand, ITIT~\cite{li_2023_ICLR} is a method to mutually generate images and their captions. ITIT performs pre-training on unpaired datasets based on bidirectional cycle consistency, and it has been shown that such pre-training improves fine-tuning performance.
+% Inspired by these works, we introduce unidirectional cycle consistency ensuring the reconstruction of the sign language prosody from the synthesized speech.
+% Considering the limited availability and high cost of collecting sign-speech paired datasets, adopting unpaired multimodal learning frameworks represents a compelling strategy to advance the task of sign-to-speech synthesis.
